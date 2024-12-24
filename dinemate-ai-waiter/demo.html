@@ -141,21 +141,14 @@
       <!-- Right Content: Demo Section -->
       <div class="flex items-center justify-center">
         <div class="bg-white rounded-lg shadow-lg p-6 max-w-xl w-2/3">
-        <h3 class="text-2xl text-gray-900 font-semibold mb-4 text-left">Listen to Sophie</h3>
-        <p class="text-gray-600 text-left mb-6">
-          Listen to a demo call
-        </p>
-
-        <!-- Waveform Container -->
-        <div class="waveform-container mx-auto">
-          <div id="waveform" class="w-full h-full"></div>
-          <!-- Play Button -->
-          <div id="playButton" class="play-button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </div>
-        </div>
+            <h1 class="text-2xl font-bold mb-4">Listen to Sophie</h1>
+            <p class="text-gray-600 mb-8">Sophie delivers delightful and personalized conversations</p>
+            <div class="bg-[#F5F5F1] rounded-xl p-6">
+                <div id="waveform" class="mb-4"></div>
+                <button id="playBtn" class="bg-[#8B4513] hover:bg-[#6B3410] text-white font-bold py-2 px-4 rounded-full focus:outline-none">
+                    Play
+                </button>
+            </div>
       </div>
     </div>
   </section>
@@ -180,4 +173,47 @@
 </div>
 </section>
 </body>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.js"></script>
+  <!-- WaveSurfer.js Script -->
+  <script>
+        // Initialize WaveSurfer
+        const wavesurfer = WaveSurfer.create({
+            container: '#waveform',
+            waveColor: '#D4D4D4',
+            progressColor: '#8B4513',
+            cursorColor: '#8B4513',
+            barWidth: 2,
+            barRadius: 3,
+            cursorWidth: 1,
+            height: 100,
+            barGap: 3
+        });
+
+        // Load audio file
+        wavesurfer.load('https://raw.githubusercontent.com/nextlightai/nextlightai.github.io/main/dinemate-ai-waiter/conv.mp3');
+
+        // Play/Pause button functionality
+        const playButton = document.getElementById('playBtn');
+        
+        playButton.addEventListener('click', () => {
+            wavesurfer.playPause();
+            playButton.textContent = wavesurfer.isPlaying() ? 'Pause' : 'Play';
+        });
+
+        // Update button text when playback ends
+        wavesurfer.on('finish', () => {
+            playButton.textContent = 'Play';
+        });
+    </script>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XH2JHCGG2Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XH2JHCGG2Q');
+</script>  
 </html>
