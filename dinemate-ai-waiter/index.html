@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DineMate AI - Smart Digital Menu & AI Waiter</title>
+<meta name="title" content="DineMate AI - Smart Digital Menu & AI Waiter">
+<meta name="description" content="Transform your restaurant with DineMate AI-powered digital menu that increases revenue through smart recommendations and multilingual support. Automate order-taking and boost sales you 20%">
+<meta name="keywords" content="DineMate AI, AI waiter, digital menu for Restaurants, restaurant AI, smart ordering system, automated restaurant service, AI restaurant menu, digital ordering system, restaurant automation, AI restaurant assistant, multilingual digital menu">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nextlightai.com/dinemate-ai-waiter/">
+<meta property="og:title" content="DineMate AI - Intelligent Digital Menu Solution for Restaurants">
+<meta property="og:description" content="Boost restaurant revenue with DineMate AI Waiter that has menu recommendations, multilingual support, and automated ordering system.">
+<!-- <meta property="og:image" content="https://yourwebsite.com/images/dinemate-preview.jpg"> -->
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://nextlightai.com/dinemate-ai-waiter/">
+<meta property="twitter:title" content="DineMate AI - Intelligent Digital Menu Solution for Restaurants">
+<meta property="twitter:description" content="Boost restaurant revenue with DineMate AI Waiter that has menu recommendations, multilingual support, and automated ordering system.">
+<!-- <meta property="twitter:image" content="https://yourwebsite.com/images/dinemate-preview.jpg"> -->
+
+<!-- Additional SEO Tags -->
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<meta name="revisit-after" content="7 days">
+<meta name="author" content="DineMate AI Waiter by NextLightAI">
+<script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/wavesurfer.js@7.8.12/dist/wavesurfer.min.js"></script>
+  <style>
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+    .hero-bg {
+      background: url('https://i.imgur.com/9KsP749.jpeg') no-repeat center center;
+      background-size: cover;
+    }
+    .scroll-header {
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .scroll-header.scrolled {
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .waveform-container {
+      position: relative;
+      width: 100%;
+      height: 120px;
+      background-color: #f9f3e9; /* Match the beige tone */
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #a57f57; /* Match the brown tone */
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .play-button svg {
+      fill: white;
+      width: 20px;
+      height: 20px;
+    }
+    .status-badge {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+        }
+        
+        .worker-title {
+            color: #6B7280;
+        }
+
+    .feature-card {
+            background-color: #fff;
+            border-radius: 24px;
+        }
+        
+        .dots-container .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #D1D5DB;
+            border-radius: 50%;
+            margin: 0 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .dots-container .dot.active {
+            background-color: #000;
+        }
+        .metric-card {
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-value {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 640px) {
+            .stat-value {
+                font-size: 2.5rem;
+            }
+        }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 w-full z-50 scroll-header">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="text-white font-bold text-xl" id="header-logo">DineMate AI</div>
+      <!-- Navigation -->
+      <!-- <nav class="hidden md:flex space-x-6">
+        <a href="#solution" class="text-white hover:text-gray-300">Solution</a>
+        <a href="#features" class="text-white hover:text-gray-300">Features</a>
+        <a href="#demo" class="text-white hover:text-gray-300">Demo</a>
+        <a href="#contact" class="text-white hover:text-gray-300">Contact</a>
+      </nav> -->
+      <!-- CTA Button -->
+      <a href="https://tally.so/r/mZPBzz" target="_blank" class="hidden sm:inline-block bg-white text-gray-900 font-semibold px-4 py-2 rounded shadow hover:bg-gray-200">
+        Get Started
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-emerald-950 py-40 min-h-screen flex items-center sm:py-24 md:py-24 lg:py-32 ">
+    <!-- Overlay -->
+    
+    <!-- Content Container -->
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <!-- Left Content -->
+      <div class="text-white">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">Meet Your New AI Waiter</h1>
+        <p class="text-lg md:text-xl mb-6">
+          Transform your restaurant with AI-powered service that delights customers and boosts sales. Engage customers with personalized menu recommendations and lightning-fast service. From suggesting perfect wine pairings to handling rush hour orders, it seamlessly combines efficiency with a personal touch - all while increasing your average check size.
+        </p>  
+        <a href="https://tally.so/r/mZPBzz" target="_blank" class="inline-block bg-white text-gray-900 font-semibold px-6 py-3 rounded shadow hover:bg-gray-200">
+          I’m Interested!
+        </a>
+      </div>
+      <!-- Right Content: Demo Section -->
+      <div class="flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg p-6 max-w-xl w-2/3">
+        <h3 class="text-2xl text-gray-900 font-semibold mb-4 text-left">Listen to Sophie</h3>
+        <p class="text-gray-600 text-left mb-6">
+          Friendly, quick with all the emotion to take customer order
+        </p>
+
+        <!-- Waveform Container -->
+        <div class="waveform-container mx-auto">
+          <div id="waveform" class="w-full h-full"></div>
+          <!-- Play Button -->
+          <div id="playButton" class="play-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="ai-staff" class="py-14 sm:py-20 bg-gray-50"">
+        <div class="max-w-4xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Meet Our AI Staff
+                </h2>
+                <p class="max-w-2xl mx-auto text-gray-600 text-lg mb-8">
+                    Imagine having staff who speaks every language, and gets smarter with each interaction. Our AI team transforms your digital menu into a revenue-generating powerhouse through personalized service.
+                </p>
+                <a href="https://tally.so/r/mZPBzz" target="_blank" class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">
+                    I'm Interested!
+                </a>
+            </div>
+
+            <!-- Workers Grid -->
+            <div class="grid md:grid-cols-2 gap-16 max-w-3xl mx-auto">
+                <!-- Alice Card -->
+                <div>
+                    <div class="relative rounded-xl overflow-hidden mb-6">
+                        <div class="w-full h-[350px] bg-cover bg-center" style="background-image: url('https://i.imgur.com/ZbU55Y3.png'); background-color: #f5f0eb;"></div>
+                        <!-- Status Badges -->
+                        <div class="absolute top-4 left-4 flex gap-3">
+                            <span class="status-badge px-4 py-2 rounded-full text-white text-sm">
+                                Sophie the Waiter
+                            </span>
+                            <!-- <span class="status-badge px-4 py-2 rounded-full text-white text-sm flex items-center gap-2">
+                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Autopilot activated
+                            </span> -->
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
+                            Sophie <span class="worker-title font-normal"> -the Waiter</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            More than just taking orders, Sophie crafts memorable dining experiences. She guides guests through your menu with expert knowledge, suggesting perfect pairings and specials that boost your average check size by 25%+.
+                        </p>
+                        <a href="https://tally.so/r/mZPBzz" target="_blank" class="inline-flex items-center text-black hover:underline font-medium">
+                            Hire Sophie →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mike Card -->
+                <div>
+                    <div class="relative rounded-xl overflow-hidden mb-6">
+                        <div class="w-full h-[350px] bg-cover bg-center" style="background-image: url('https://i.imgur.com/8Y6zy81.png'); background-color: #f5f0eb;"></div>
+                        <!-- Status Badges -->
+                        <div class="absolute top-4 left-4 flex gap-3">
+                            <span class="status-badge px-4 py-2 rounded-full text-white text-sm">
+                                Ryan 
+                            </span>
+                            <span class="status-badge px-4 py-2 rounded-full text-white text-sm flex items-center gap-2">
+                                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                Active
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
+                            Ryan <span class="worker-title font-normal">-the Recommender</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Using analytics and customer preferences, Ryan ensures every recommendation hits the mark. From wine pairings to trending dishes, he turns casual diners into loyal customers who spend more and return often.
+                        </p>
+                        <a href="https://tally.so/r/mZPBzz" target="_blank" class="inline-flex items-center text-black hover:underline font-medium">
+                            Hire Ryan →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 sm:py-20 px-4 bg-[#F5F2F0]">
+        <div class="max-w-5xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                   Transform Your Restaurant with AI Innovation
+                </h2>
+                <p class="max-w-3xl mx-auto text-gray-600 text-lg mb-8">
+                    Elevate dining experiences and boost revenue with our intelligent ordering system that understands and delights your customers.
+                </p>
+                <a href="https://tally.so/r/mZPBzz" target="_blank" class="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors">
+                    I'm Interested
+                </a>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Customised Card -->
+                <div class="feature-card p-8">
+                    <div class="aspect-square mb-8 relative">
+                        <img src="https://i.imgur.com/57MKrfp.png" alt="Customization illustration" class="w-full h-full object-cover rounded-2xl">
+                        <!-- App icons can be added as absolute positioned elements -->
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Smart Menu Navigation</h3>
+                    <p class="text-gray-600">
+                        Turn browsers into buyers with an AI that guides customers through your menu like a seasoned server. Our system answers ingredient questions, highlights specials, and makes personalized recommendations that increase order value.
+                    </p>
+                </div>
+
+                <!-- Integration Card -->
+                <div class="feature-card p-8">
+                    <div class="aspect-square mb-8 relative">
+                        <img src="https://i.imgur.com/F0eggZU.png" alt="Integration illustration" class="w-full h-full object-cover rounded-2xl">
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Multilingual Excellence</h3>
+                    <p class="text-gray-600">
+                        Break language barriers with natural conversations in English and Arabic (Beta). Serve international customers with the same warmth and expertise as local ones, expanding your market reach.
+                    </p>
+                </div>
+
+                <!-- Intelligence Card -->
+                <div class="feature-card p-8">
+                    <div class="aspect-square mb-8 relative">
+                        <img src="https://i.imgur.com/uxsu6UF.png" alt="Calendar interface" class="w-full h-full object-cover rounded-2xl">
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Operational Efficiency</h3>
+                    <p class="text-gray-600">
+                        Free your staff from routine order-taking to focus on hospitality. Our AI handles multiple customers simultaneously, reducing wait times and overhead while maintaining consistent service quality.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- HTML -->
+<section class="py-32 bg-emerald-950 text-white">
+    <div class="max-w-5xl mx-auto px-4">
+        <div class="flex flex-col gap-8">
+            <!-- Header -->
+            <div>
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4">Drive Sales Growth with AI</h2>
+                <p class="text-gray-300 text-lg mb-8">Transform every order into an opportunity with our AI that actively boosts sales through smart recommendations and data-driven insights. Our restaurants see 20-30% higher average order values through perfectly-timed combo suggestions, while comprehensive analytics help you optimize your menu and pricing for maximum profitability. From handling rush hours without added staff to tracking customer preferences, our AI turns efficiency into revenue.</p>
+                <a href="https://tally.so/r/mZPBzz" target="_blank" class="mt-6 bg-white text-emerald-950 px-6 py-3 rounded-full hover:bg-gray-100 transition-colors">
+                    I'm Interested
+                </a>
+            </div>
+
+            <!-- Metrics Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+                <div class="metric-card">
+                    <span class="text-gray-300 text-sm">Average Order Value</span>
+                    <div class="stat-value">20%</div>
+                    <span class="text-sm text-gray-300">Increase with AI recommendations</span>
+                </div>
+
+                <div class="metric-card">
+                    <span class="text-gray-300 text-sm">Average Revenue Increase</span>
+                    <div class="stat-value">$4K</div>
+                    <span class="text-sm text-gray-300">Monthly per restaurant</span>
+                </div>
+
+                <!-- Customer Satisfaction -->
+                <div class="metric-card">
+                    <span class="text-gray-300 text-sm">Customer Satisfaction</span>
+                    <div class="stat-value">95%</div>
+                    <span class="text-sm text-gray-300">Positive feedback rate</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900 text-gray-400 py-12">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Column 1: About -->
+    <div>
+      <h3 class="text-white text-lg font-bold mb-4">DineMate AI</h3>
+      <p class="text-sm">
+        Transforming the dining experience with cutting-edge AI solutions. Engage customers, streamline operations, and grow your revenue effortlessly.
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="mt-8 border-t border-gray-700 pt-4 text-center">
+    <p class="text-sm">
+      © 2024 NextLightAI. All rights reserved.
+    </p>
+  </div>
+</footer>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.js"></script>
+  <!-- WaveSurfer.js Script -->
+  <script>
+    // Header Scroll Logic
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+        document.getElementById('header-logo').classList.replace('text-white', 'text-gray-900');
+      } else {
+        header.classList.remove('scrolled');
+        document.getElementById('header-logo').classList.replace('text-gray-900', 'text-white');
+      }
+    });
+
+    // Initialize WaveSurfer
+    const wavesurfer = WaveSurfer.create({
+      container: '#waveform',
+      waveColor: '#d9d9d9',
+      progressColor: '#4a90e2',
+      height: 80,
+      responsive: true,
+      barWidth: 2,
+    });
+
+    // Load Audio
+    wavesurfer.load('https://github.com/rafaelreis-hotmart/Audio-Sample-files/raw/master/sample.mp3');
+
+    // Play/Pause Button
+    document.getElementById('play-audio').addEventListener('click', () => {
+      wavesurfer.playPause();
+    });
+  </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XH2JHCGG2Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XH2JHCGG2Q');
+</script>
+</body>
+</html>

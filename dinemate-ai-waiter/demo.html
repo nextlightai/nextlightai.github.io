@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DineMate AI - Demo call</title>
+<script src="https://cdn.tailwindcss.com"></script>
+  <elevenlabs-convai agent-id="BK6i5CjOdLTJ0qmzCopa"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+  <script src="https://unpkg.com/wavesurfer.js@7.8.12/dist/wavesurfer.min.js"></script>
+  <style>
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+    .hero-bg {
+      background: url('https://i.imgur.com/9KsP749.jpeg') no-repeat center center;
+      background-size: cover;
+    }
+    .scroll-header {
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .scroll-header.scrolled {
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .waveform-container {
+      position: relative;
+      width: 100%;
+      height: 120px;
+      background-color: #f9f3e9; /* Match the beige tone */
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #a57f57; /* Match the brown tone */
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .play-button svg {
+      fill: white;
+      width: 20px;
+      height: 20px;
+    }
+    .status-badge {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+        }
+        
+        .worker-title {
+            color: #6B7280;
+        }
+
+    .feature-card {
+            background-color: #fff;
+            border-radius: 24px;
+        }
+        
+        .dots-container .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #D1D5DB;
+            border-radius: 50%;
+            margin: 0 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .dots-container .dot.active {
+            background-color: #000;
+        }
+        .metric-card {
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-value {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 640px) {
+            .stat-value {
+                font-size: 2.5rem;
+            }
+        }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 w-full z-50 scroll-header">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="text-white font-bold text-xl" id="header-logo">DineMate AI</div>
+      <a href="https://tally.so/r/mZPBzz" target="_blank" class="hidden sm:inline-block bg-white text-gray-900 font-semibold px-4 py-2 rounded shadow hover:bg-gray-200">
+        Get Started
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-emerald-950 py-40 min-h-screen flex items-center sm:py-24 md:py-24 lg:py-32 ">
+    <!-- Overlay -->
+    
+    <!-- Content Container -->
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <!-- Left Content -->
+      <div class="text-white">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">Try talking to Sophie</h1>
+        <p class="text-lg md:text-xl mb-6">
+          Experience DineMate AI Waiter in action - try placing an order at McDonald's with Sophie! She can take your order, suggest additional items, and even upsell your regular burger into a complete meal.
+        </p>  
+        <a href="https://tally.so/r/mZPBzz" target="_blank" class="inline-block bg-white text-gray-900 font-semibold px-6 py-3 rounded shadow hover:bg-gray-200">
+          I’m Interested!
+        </a>
+      </div>
+      <!-- Right Content: Demo Section -->
+      <div class="flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg p-6 max-w-xl w-2/3">
+        <h3 class="text-2xl text-gray-900 font-semibold mb-4 text-left">Listen to Sophie</h3>
+        <p class="text-gray-600 text-left mb-6">
+          Listen to a demo call
+        </p>
+
+        <!-- Waveform Container -->
+        <div class="waveform-container mx-auto">
+          <div id="waveform" class="w-full h-full"></div>
+          <!-- Play Button -->
+          <div id="playButton" class="play-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-gray-900 text-gray-400 py-12">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Column 1: About -->
+    <div>
+      <h3 class="text-white text-lg font-bold mb-4">DineMate AI</h3>
+      <p class="text-sm">
+        Transforming the dining experience with cutting-edge AI solutions. Engage customers, streamline operations, and grow your revenue effortlessly.
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="mt-8 border-t border-gray-700 pt-4 text-center">
+    <p class="text-sm">
+      © 2024 NextLightAI. All rights reserved.
+    </p>
+  </div>
+</footer>
+</div>
+</section>
+</body>
+</html>
