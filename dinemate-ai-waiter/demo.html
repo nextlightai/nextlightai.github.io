@@ -7,8 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DineMate AI - Demo call</title>
 <script src="https://cdn.tailwindcss.com"></script>
-  <elevenlabs-convai agent-id="BK6i5CjOdLTJ0qmzCopa"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
-  <script src="https://unpkg.com/wavesurfer.js@7.8.12/dist/wavesurfer.min.js"></script>
   <style>
     @layer utilities {
       .content-auto {
@@ -123,7 +121,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="fixed bg-emerald-950 py-40 min-h-screen flex items-center sm:py-24 md:py-24 lg:py-32 ">
+  <section class="fixed w-full bg-emerald-950 py-40 min-h-screen flex items-center sm:py-24 md:py-24 lg:py-32 ">
     <!-- Overlay -->
     
     <!-- Content Container -->
@@ -162,40 +160,8 @@
 </div>
 </section>
 </body>
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.js"></script>
-  <!-- WaveSurfer.js Script -->
-  <script>
-        // Initialize WaveSurfer
-        const wavesurfer = WaveSurfer.create({
-            container: '#waveform',
-            waveColor: '#D4D4D4',
-            progressColor: '#8B4513',
-            cursorColor: '#8B4513',
-            barWidth: 2,
-            barRadius: 3,
-            cursorWidth: 1,
-            height: 100,
-            barGap: 3
-        });
-
-        // Load audio file
-        wavesurfer.load('https://raw.githubusercontent.com/nextlightai/nextlightai.github.io/main/dinemate-ai-waiter/conv.mp3');
-
-        // Play/Pause button functionality
-        const playButton = document.getElementById('playBtn');
-        
-        playButton.addEventListener('click', () => {
-            wavesurfer.playPause();
-            playButton.textContent = wavesurfer.isPlaying() ? 'Pause' : 'Play';
-        });
-
-        // Update button text when playback ends
-        wavesurfer.on('finish', () => {
-            playButton.textContent = 'Play';
-        });
-    </script>
-
+<elevenlabs-convai agent-id="BK6i5CjOdLTJ0qmzCopa"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+  
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XH2JHCGG2Q"></script>
 <script>
